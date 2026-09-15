@@ -10,7 +10,7 @@ program define dotemp, rclass
     *--------------*
     if "`purpose'" == "" local purpose " "
     else {
-    local PURpose "`PURpose'"
+    local purpose "`purpose'"
     }
 
     if "`author'" == "" local author "Author_Name"
@@ -20,7 +20,7 @@ program define dotemp, rclass
 
     if "`email'" == "" local email "Email"
     else{
-        local EMAil "`EMAil'"
+        local email "`Email'"
     }
 
     if "`location'" == "" local location `=c(pwd)'
@@ -30,27 +30,27 @@ program define dotemp, rclass
 
     **File save to given location
     *----------------------------*    
-    copy "https://github.com/armanmahmud1/do-template/blob/main/template/temp.do" "`title'.do", replace
+    copy "https://raw.githubusercontent.com/armanmahmud1/do-template/refs/heads/main/template/temp.do" "`title'.do", replace
     
     *File write*
     *------------*
-    file open myfile using "`location'/`title'.do", write replace
-    file write myfile "/* ///
-     ╔═══════════════════════════════════════════════════════════════════════════════╗ ///
-     ║-------------------------------------------------------------------------------║ _n ///
-     ║  TITLE:           `title'                                                     ║ _n ///
-     ║  PROJECT:         `project'                                                   ║ _n ///
-     ║  PURPOSE:         `purpose'                                                   ║ _n ///
-     ║-------------------------------------------------------------------------------║ _n ///                
-     ║  AUTHOR:          `author'                                                    ║ _n ///
-     ║  CONTACT:         `email'                                                     ║ _n ///
-     ║-------------------------------------------------------------------------------║ _n ///       
-     ║  CREATED:         `=c(current_date)'                                          ║ _n ///
-     ║  MODIFIED:        `=c(current_date)'                                          ║ _n ///
-     ╚═══════════════════════════════════════════════════════════════════════════════╝ _n ///
-                                                                                                                                                                                                            */" _n ///
-     "_n" ///                                                                                                                                    	" _n
-     "_n"                                                                                                                                                                                                                                                                                                                                                                                       	" _n           
+    file open myfile using "`location'/`title'.do", read write
+    file seek myfile 0
+    file write myfile _col(201) "/*" _n ///
+	 _col(1) "╔═══════════════════════════════════════════════════════════════════════════════╗" _n ///
+	 _col(1) "║-------------------------------------------------------------------------------║" _n ///
+     _col(1) "║  TITLE:           `title'" _col(83)"║" _n ///
+     _col(1) "║  PROJECT:         `project'" _col(83)"║" _n ///
+     _col(1) "║  PURPOSE:         `purpose'" _col(83)"║" _n ///
+     _col(1) "║-------------------------------------------------------------------------------║" _n ///                
+     _col(1) "║  AUTHOR:          `author'" _col(83)"║" _n ///
+     _col(1) "║  CONTACT:         `email'" _col(83)"║" _n ///
+     _col(1) "║-------------------------------------------------------------------------------║" _n ///       
+     _col(1) "║  CREATED:         `=c(current_date)'" _col(83)"║" _n ///
+     _col(1) "║  MODIFIED:        `=c(current_date)'" _col(83)"║" _n ///
+     _col(1) "╚═══════════════════════════════════════════════════════════════════════════════╝" _n ///
+	 _col(201) "*/" _n
+                                                                              
     
 
 end
