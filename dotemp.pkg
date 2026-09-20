@@ -1,0 +1,15 @@
+v 3
+d dotemp: module to create a formatted do-file header template
+d
+d  dotemp downloads a do-file template and inserts a formatted
+d  header block containing the title, project, purpose, author,
+d  contact, and creation/modification dates. Intended to
+d  standardize do-file headers across a project or team.
+d
+d Author: Arman Mahmud
+d Support: email armanmahmud.du18@gmail.com
+d
+d Distribution-Date: 20260920
+d
+f dotemp.ado
+f dotemp.sthlp

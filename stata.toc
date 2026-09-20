@@ -1,0 +1,3 @@
+v 3
+d 'DOTEMP': module to create formatted do-file header templates
+p dotemp dotemp.pkg "dotemp: formatted do-file header template"
