@@ -65,6 +65,5 @@ Full details: `help dotemp` after installation.
 ## Author
 
 **Arman Mahmud** </br>
-Email: armanmahmud.du18@gmail.com </br>
 Website: [www.arman-mahmud.com](https://www.arman-mahmud.com) </br>
 GitHub: [@armanmahmud1](https://github.com/armanmahmud1)
